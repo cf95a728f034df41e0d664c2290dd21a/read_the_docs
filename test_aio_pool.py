@@ -59,7 +59,7 @@ class Test:
 def main(sleep, sample, workers, log_level=logging.INFO):
     _loop = asyncio.get_event_loop()
 
-    print('{0}    sleep: {1}, sample: {2}, works: {3}    {0}'.format('-' * 30, sleep, sample, workers))
+    print('{0}    sleep: {1}, sample: {2}, workers: {3}    {0}'.format('-' * 30, sleep, sample, workers))
 
     _sample = range(sample)
 
