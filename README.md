@@ -27,15 +27,15 @@ env/bin/python test_aio_pool.py --sleep 1 --sample 1000 --workers 100
 env/bin/python test_aio_pool.py --sleep 10 --sample 10000 --workers 1000
 
 # output
-------------------------------    sleep: 0.1, sample: 100, works: 10    ------------------------------
+------------------------------    sleep: 0.1, sample: 100, workers: 10    ------------------------------
 coroutine map benchmark: 1.006 seconds
 thread map benchmark: 1.354 seconds
 process map benchmark: 1.274 seconds
-------------------------------    sleep: 1, sample: 1000, works: 100    ------------------------------
+------------------------------    sleep: 1, sample: 1000, workers: 100    ------------------------------
 coroutine map benchmark: 10.023 seconds
 thread map benchmark: 12.135 seconds
 process map benchmark: 12.393 seconds
-------------------------------    sleep: 10, sample: 10000, works: 1000    ------------------------------
+------------------------------    sleep: 10, sample: 10000, workers: 1000    ------------------------------
 coroutine map benchmark: 100.160 seconds
 thread map benchmark: 129.090 seconds
 process map benchmark: BlockingIOError: [Errno 35] Resource temporarily unavailable
