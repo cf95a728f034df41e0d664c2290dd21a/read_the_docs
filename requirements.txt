@@ -1,0 +1,6 @@
+aiodns
+aiohttp
+async-timeout
+fire
+progressbar2
+requests
