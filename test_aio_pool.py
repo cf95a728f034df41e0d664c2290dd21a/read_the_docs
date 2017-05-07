@@ -19,7 +19,7 @@ class Test:
     def __init__(self, sleep, workers, log_level):
         self.sleep = sleep
         self.workers = workers
-        self.logger = get_logger(log_level)
+        self.logger = get_logger(__name__, log_level)
 
     async def async_sleep(self, x):
         await asyncio.sleep(self.sleep)
@@ -72,8 +72,8 @@ def main(sleep, sample, workers, log_level=logging.INFO):
     _loop.close()
 
 if __name__ == '__main__':
-    # env/bin/python aio_pool.py --sleep SLEEP --sample SAMPLE --workers WORKERS [--log-level LOG_LEVEL]
-    # env/bin/python aio_pool.py --sleep 0.1 --sample 100 --workers 10
-    # env/bin/python aio_pool.py --sleep 1 --sample 1000 --workers 100
-    # env/bin/python aio_pool.py --sleep 10 --sample 10000 --workers 1000
+    # env/bin/python test_aio_pool.py --sleep SLEEP --sample SAMPLE --workers WORKERS [--log-level LOG_LEVEL]
+    # env/bin/python test_aio_pool.py --sleep 0.1 --sample 100 --workers 10
+    # env/bin/python test_aio_pool.py --sleep 1 --sample 1000 --workers 100
+    # env/bin/python test_aio_pool.py --sleep 10 --sample 10000 --workers 1000
     fire.Fire(main)
